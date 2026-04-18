@@ -2,7 +2,7 @@ defmodule CheckoutClient.MixProject do
   use Mix.Project
 
   @version "1.0.0"
-  @source_url "https://github.com/your-org/checkout_client"
+  @source_url "https://github.com/iamkanishka/checkout_client"
   @description """
   Production-grade Elixir client for the Checkout.com API. Covers all APIs:
   Payments, Flow, Disputes, Instruments, Customers, Tokens, Workflows, Transfers,
@@ -16,7 +16,7 @@ defmodule CheckoutClient.MixProject do
     [
       app: :checkout_client,
       version: @version,
-      elixir: "~> 1.14",
+      elixir: "~> 1.18",
       elixirc_paths: elixirc_paths(Mix.env()),
       start_permanent: Mix.env() == :prod,
       deps: deps(),
@@ -57,7 +57,7 @@ defmodule CheckoutClient.MixProject do
       {:telemetry_metrics, "~> 1.0"},
       {:telemetry_poller, "~> 1.1"},
       # Dev tooling
-      {:ex_doc, "~> 0.35", only: :dev, runtime: false},
+      {:ex_doc, "~> 0.40", only: :dev, runtime: false},
       {:dialyxir, "~> 1.4", only: [:dev, :test], runtime: false},
       {:credo, "~> 1.7", only: [:dev, :test], runtime: false},
       {:excoveralls, "~> 0.18", only: :test},
