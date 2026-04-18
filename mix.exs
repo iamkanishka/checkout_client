@@ -23,7 +23,7 @@ defmodule CheckoutClient.MixProject do
       aliases: aliases(),
       description: @description,
       package: package(),
-      name: "CheckoutClient",
+      name: "checkout_client",
       source_url: @source_url,
       homepage_url: "https://hexdocs.pm/checkout_client",
       docs: docs(),
