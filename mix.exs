@@ -4,12 +4,7 @@ defmodule CheckoutClient.MixProject do
   @version "1.0.0"
   @source_url "https://github.com/iamkanishka/checkout_client"
   @description """
-  Production-grade Elixir client for the Checkout.com API. Covers all APIs:
-  Payments, Flow, Disputes, Instruments, Customers, Tokens, Workflows, Transfers,
-  Balances, Forex, Card Issuing, Platforms, Reports, Financial Actions, Network
-  Tokens, Identity Verification, Apple Pay, Google Pay, Forward, Compliance, and
-  Agentic Commerce. Features: OAuth 2.0 with auto-refresh, idempotency, exponential
-  backoff, AWS PrivateLink, mTLS, Telemetry, Mox-compatible behaviours.
+  Production-grade Elixir client for the Checkout.com API. Supports Payments, Disputes, Tokens, Customers, Transfers, and more. Features OAuth 2.0, idempotency, retries with backoff, Telemetry, and full API coverage.
   """
 
   def project do
