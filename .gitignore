@@ -1,0 +1,13 @@
+/_build/
+/cover/
+/deps/
+/doc/
+/.fetch
+*.ez
+/priv/plts/
+/tmp/
+.env
+.env.local
+.DS_Store
+.elixir_ls/
+.vscode/
