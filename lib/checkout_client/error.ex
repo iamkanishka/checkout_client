@@ -51,7 +51,10 @@ defmodule CheckoutClient.Error do
   def message(%__MODULE__{} = err) do
     base = err.message
     status_part = if err.status, do: " (HTTP #{err.status})", else: ""
-    codes_part = if err.error_codes != [], do: " codes=#{Enum.join(err.error_codes, ",")}", else: ""
+
+    codes_part =
+      if err.error_codes != [], do: " codes=#{Enum.join(err.error_codes, ",")}", else: ""
+
     rid_part = if err.request_id, do: " request_id=#{err.request_id}", else: ""
     base <> status_part <> codes_part <> rid_part
   end

@@ -103,7 +103,8 @@ defmodule CheckoutClient.Config do
              ]},
             {:pool_size,
              [type: :pos_integer, default: 10, doc: "Finch connection pool size per host."]},
-            {:pool_count, [type: :pos_integer, default: 1, doc: "Number of Finch pools per host."]},
+            {:pool_count,
+             [type: :pos_integer, default: 1, doc: "Number of Finch pools per host."]},
             {:max_retries,
              [
                type: :non_neg_integer,
@@ -113,7 +114,11 @@ defmodule CheckoutClient.Config do
             {:retry_base_delay,
              [type: :pos_integer, default: 500, doc: "Base retry delay in milliseconds."]},
             {:retry_max_delay,
-             [type: :pos_integer, default: 30_000, doc: "Maximum retry delay cap in milliseconds."]},
+             [
+               type: :pos_integer,
+               default: 30_000,
+               doc: "Maximum retry delay cap in milliseconds."
+             ]},
             {:idempotency_key_prefix,
              [
                type: {:or, [:string, nil]},

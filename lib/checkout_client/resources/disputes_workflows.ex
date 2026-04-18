@@ -28,7 +28,8 @@ defmodule CheckoutClient.Disputes do
     do: Client.get("/disputes/#{dispute_id}/evidence", opts)
 
   @doc "Submit evidence to the card scheme."
-  @spec submit_evidence(String.t(), keyword()) :: {:ok, map()} | {:error, CheckoutClient.Error.t()}
+  @spec submit_evidence(String.t(), keyword()) ::
+          {:ok, map()} | {:error, CheckoutClient.Error.t()}
   def submit_evidence(dispute_id, opts \\ []),
     do: Client.post("/disputes/#{dispute_id}/evidence/submit", %{}, opts)
 

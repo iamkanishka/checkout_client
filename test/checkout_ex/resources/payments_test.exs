@@ -87,7 +87,8 @@ defmodule CheckoutClient.PaymentsTest do
         )
       end)
 
-      assert {:error, %Error{type: :validation_error, status: 422, error_codes: ["amount_invalid"]}} =
+      assert {:error,
+              %Error{type: :validation_error, status: 422, error_codes: ["amount_invalid"]}} =
                Payments.request(%{}, bypass_opts(bypass, cfg))
     end
 

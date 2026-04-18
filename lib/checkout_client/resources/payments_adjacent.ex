@@ -212,7 +212,8 @@ defmodule CheckoutClient.Sessions do
     do: Client.put("/sessions/#{session_id}", body, opts)
 
   @doc "Complete a session."
-  @spec complete(String.t(), map(), keyword()) :: {:ok, map()} | {:error, CheckoutClient.Error.t()}
+  @spec complete(String.t(), map(), keyword()) ::
+          {:ok, map()} | {:error, CheckoutClient.Error.t()}
   def complete(session_id, body \\ %{}, opts \\ []),
     do: Client.post("/sessions/#{session_id}/complete", body, opts)
 
